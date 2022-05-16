@@ -59,7 +59,147 @@
 
         </section>
 
-        <section class="section_services py-5"></section>
+        <section class="section_services py-5">
+
+            <div class="container">
+
+                <span class="small_title">Our business areas</span>
+
+                <h2 class="text-white"> Excellence in <span class="squared_title">Services</span> </h2>
+
+                <div class="row">
+
+                    <div class="col-9 d-flex align-items-center">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ad saepe nostrum facere quae odio dolor totam animi nihil. Pariatur ullam dolores voluptatibus repellendus molestias?</p>
+                    </div>
+
+                    <div class="col-3 d-flex justify-content-end align-items-center">
+                        <BorderBtn text='See all' />
+                    </div>
+
+                </div>
+                
+                <div class="row gy-3">
+
+                    <div class="col">
+
+                      <div class="service_card p-4">
+
+                             <div class="symbols my-3">
+
+                                <font-awesome-icon icon="fa-solid fa-diagram-project" class="fs-1" />
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+
+                            </div>
+
+                            <h4 class="text-white">Audit & Assurance</h4>
+
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, id.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                      <div class="service_card p-4">
+
+                             <div class="symbols my-3">
+
+                                <font-awesome-icon icon="fa-solid fa-diagram-project" class="fs-1" />
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+
+                            </div>
+
+                            <h4 class="text-white">Audit & Assurance</h4>
+
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, id.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                      <div class="service_card p-4">
+
+                             <div class="symbols my-3">
+
+                                <font-awesome-icon icon="fa-solid fa-diagram-project" class="fs-1" />
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+
+                            </div>
+
+                            <h4 class="text-white">Audit & Assurance</h4>
+
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, id.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                      <div class="service_card p-4">
+
+                             <div class="symbols my-3">
+
+                                <font-awesome-icon icon="fa-solid fa-diagram-project" class="fs-1" />
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+
+                            </div>
+
+                            <h4 class="text-white">Audit & Assurance</h4>
+
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, id.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                      <div class="service_card p-4">
+
+                             <div class="symbols my-3">
+
+                                <font-awesome-icon icon="fa-solid fa-diagram-project" class="fs-1" />
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+
+                            </div>
+
+                            <h4 class="text-white">Audit & Assurance</h4>
+
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, id.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                      <div class="service_card p-4">
+
+                             <div class="symbols my-3">
+
+                                <font-awesome-icon icon="fa-solid fa-diagram-project" class="fs-1" />
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+
+                            </div>
+
+                            <h4 class="text-white">Audit & Assurance</h4>
+
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, id.</p>
+
+                        </div>
+
+                    </div>                
+                    
+                </div>
+
+            </div>
+
+        </section>
 
         <section class="py-5"></section>
 
@@ -75,11 +215,13 @@
 
 <script>
 import Jumbotron from '@/components/JumbotronComponent.vue'
+import BorderBtn from '@/components/BorderBtn.vue'
 
 export default {
     name: 'MainComponent',
     components: {
-        Jumbotron
+        Jumbotron,
+        BorderBtn
     }
 }
 </script>
@@ -99,6 +241,11 @@ export default {
 
     .squared_title {
         background-color: $tradewind;
+        opacity: 0.6;
+    }
+
+    section {
+        color: $mid_gray;
     }
 
     .section_intro_video {
@@ -112,6 +259,7 @@ export default {
 
     .section_results {
         background-image: url(@/assets/img/images/bg-7.jpg);
+        background-size: cover;
 
         .result {
             text-align: center;
@@ -119,6 +267,23 @@ export default {
             h4 {
                 color: $surfie_green;
                 font-size: 2rem;
+            }
+
+        }
+    }
+
+    .section_services {
+        background-color: $woodsmoke;
+
+        .service_card {
+            background-color: $shark;
+            border-radius: 0.5rem;
+
+            .symbols {
+                color: $surfie_green;
+                display: flex;
+                justify-content: space-between;
+                
             }
 
         }
