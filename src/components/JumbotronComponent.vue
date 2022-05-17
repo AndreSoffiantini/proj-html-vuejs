@@ -7,19 +7,19 @@
             <div class="jumbotron_header row py-3">
 
                 <div class="col">
-                    <img src="@/assets/img/images/image.png" alt="">
+                    <NexGen />
                 </div>
 
                 <div class="col">
 
                     <nav class="text-uppercase">
-                        <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Services</a>
-                        <a href="">Team</a>
-                        <a href="">Blog</a>
-                        <a href=""> <font-awesome-icon icon="fa-regular fa-user" /> </a>
-                        <RoundedButton text='Get in touch' class="filled_btn" />
+                        <a class="mx-3" href="">Home</a>
+                        <a class="mx-3" href="">About</a>
+                        <a class="mx-3" href="">Services</a>
+                        <a class="mx-3" href="">Team</a>
+                        <a class="mx-3" href="">Blog</a>
+                        <a class="mx-3" href=""> <font-awesome-icon icon="fa-regular fa-user" /> </a>
+                        <RoundedButton text='Get in touch' class="filled_btn text-white" />
                     </nav>
 
                 </div>
@@ -29,11 +29,14 @@
             <div class="jumbotron_main text-white text-center d-flex justify-content-center align-items-center">
 
                 <div class="jumbtron_main_text">
-                    <h1>Financial risk</h1>
+                    <h1 class="mb-4">Financial risk</h1>
 
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, temporibus.</p>
+                    <span>The right outcomes depend on continuos rigor in governance, models, and</span>
+                    <br>
+                    <span>processes across the finance function</span>
+                    <br>
 
-                    <RoundedButton text='Get in touch' class="filled_btn" /> <RoundedButton text='Read more' class="border_btn" />
+                    <RoundedButton text='Get in touch' class="filled_btn text-white mt-5 mx-2" /> <RoundedButton text='Read more' class="border_btn text-white mt-5 mx-2" />
 
                 </div>
 
@@ -47,11 +50,13 @@
 
 <script>
 import RoundedButton from '@/components/RoundedButton.vue';
+import NexGen from '@/components/NexGenComponent.vue';
 
 export default {
     name: 'JumbotronComponent',
     components: {
-        RoundedButton
+        RoundedButton,
+        NexGen
     }
 }
 </script>
@@ -69,6 +74,11 @@ export default {
     .jumbotron {
         height: 900px;
         background-image: url(@/assets/img/images/bg-2.jpg);
+
+        h1 {
+            font-weight: 900;
+            font-size: 4rem;
+        }
 
         .jumbotron_header {
             height: 5%;

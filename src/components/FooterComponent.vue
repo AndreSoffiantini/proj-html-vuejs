@@ -9,7 +9,7 @@
 
                     <div class="col">
 
-                        <h2 class="text-white mb-3">NexGen</h2>
+                        <NexGenComponent/>
 
                         <p class="my-4">A functional HTML Template for Corporate & Business</p>
 
@@ -33,12 +33,12 @@
 
                         <div class="section_card h-100 p-4">
 
-                            <h4 class="text-white">{{section.title}}</h4>
+                            <h4 class="text-white mb-3">{{section.title}}</h4>
 
                             <div class="section_element my-2" v-for="element in section.elements" :key="element">
 
                                 <font-awesome-icon icon="fa-solid fa-arrow-right"/> 
-                                <span class="mx-2"> {{element}}</span>
+                                <a class="mx-2 text-decoration-none text-light"> {{element}}</a>
 
                             </div>
 
@@ -69,12 +69,14 @@
 
 <script>
 import RoundedButton from '@/components/RoundedButton.vue'
+import NexGenComponent from '@/components/NexGenComponent.vue'
 
 export default {
     name: 'FooterComponent',
     components: {
-        RoundedButton
-    },
+    RoundedButton,
+    NexGenComponent,
+},
     data() {
         return {
             sections: [
@@ -115,7 +117,7 @@ export default {
             background-position: center;
 
             .section_card {
-                background-color: $shark;
+                background-color: #1d25285b;
                 border-radius: 0.5rem;
             }
 

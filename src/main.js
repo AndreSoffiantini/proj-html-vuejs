@@ -23,6 +23,12 @@ library.add(faClock, faPhone, faEnvelope, faFacebookF, faTwitter, faLinkedinIn, 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+/* Font Nunito */
+import "@fontsource/nunito"
+import "@fontsource/nunito/300.css"
+import "@fontsource/nunito/600.css"
+import "@fontsource/nunito/900.css"
+
 Vue.config.productionTip = false
 
 new Vue({

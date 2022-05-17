@@ -1,6 +1,6 @@
 <template>
   
-    <header>
+    <header class="bg-dark">
 
         <div class="container">
             <div class="row py-3">
@@ -55,9 +55,7 @@ export default {
 <style lang="scss" scoped>
 
     header {
-        background-color: $cape_cod;
         color: $gray_nurse;
     }
-
 
 </style>
