@@ -324,9 +324,43 @@
 
         </section>
 
-        <section class="section_newsletter py-5"></section>
+        <section class="section_newsletter py-5">
 
-        <section class="section_message py-5"></section>
+            <div class="container p-5">
+
+                <div class="row row-cols-2">
+
+                    <div class="col">
+
+                        <strong class="small_title">Newsletter</strong>
+
+                        <h2 class="text-white my-3"> <span class="dark_bg_title">Know</span> First </h2>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt doloremque totam quod atque perspiciatis veniam?</p>
+
+                    </div>
+
+                    <div class="col">
+
+                        <form>
+                            <input type="text" class="form-control" placeholder="Name">
+
+                            <input type="email" class="form-control my-3" placeholder="Email">
+        
+                            <RoundedButton class="filled_btn" text="Subscribe" />
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section_message py-5">
+
+        </section>
 
     </main>
 
@@ -339,9 +373,9 @@ import RoundedButton from '@/components/RoundedButton.vue'
 export default {
     name: 'MainComponent',
     components: {
-        Jumbotron,
-        RoundedButton
-    },
+    Jumbotron,
+    RoundedButton
+},
     data() {
         return {
            team_members: [
@@ -475,6 +509,16 @@ export default {
                 filter: brightness(0.4);
                 border-radius: 0.75rem;
             }
+        }
+    }
+
+    .section_newsletter {
+        background-color: $woodsmoke;
+
+        input {
+            background-color: $shark;
+            border: 1px solid $woodsmoke;
+            width: 50%;
         }
     }
 
