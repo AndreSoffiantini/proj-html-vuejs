@@ -229,9 +229,9 @@
                                             <p class="card-text text-uppercase"><small class="text-muted">{{member.role}}</small></p>
                                             <div>
 
-                                                <font-awesome-icon icon="fa-brands fa-facebook-f" class="member_socials"/>
-                                                <font-awesome-icon icon="fa-brands fa-twitter" class="member_socials mx-4" />
-                                                <font-awesome-icon icon="fa-brands fa-linkedin-in" class="member_socials"/>
+                                                <font-awesome-icon icon="fa-brands fa-facebook-f" class="rounded_icon"/>
+                                                <font-awesome-icon icon="fa-brands fa-twitter" class="rounded_icon mx-4" />
+                                                <font-awesome-icon icon="fa-brands fa-linkedin-in" class="rounded_icon"/>
 
                                             </div>
                                         </div>
@@ -360,6 +360,77 @@
 
         <section class="section_message py-5">
 
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-8">
+
+                        <strong class="small_title">Send a message</strong>
+                        <h2 class="text-black my-3">Get in <span class="light_bg_title">Touch</span> </h2>
+                        <p>We will respond to your message as soon as possible</p>
+
+                        <form>
+
+                            <div class="row gy-4">
+
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+
+                                <div class="col-6">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+
+                                <div class="col-6">
+                                    <input type="phone" class="form-control" placeholder="Phone">
+                                </div>
+
+                                <div class="col-6">
+                                    <select  class="form-select" > 
+                                        <option selected disabled value="">More info</option>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <textarea class="form-control" placeholder="Message" cols="30" rows="10"></textarea>
+                                </div>
+
+                            </div>                            
+        
+                            <RoundedButton class="filled_btn my-4" text="Send" />
+                        </form>
+
+                    </div>
+
+                    <div class="col-4 px-5">
+
+                        <h3 class="text-black mb-3">Example Inc.</h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                        <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+                        <div class="info">
+                            <font-awesome-icon icon="fa-solid fa-phone mt-4" class="rounded_icon"/> <span> +1 (305) 1234-5678</span>
+                        </div>
+
+                        <div class="info">
+                            <font-awesome-icon icon="fa-solid fa-envelope" class="rounded_icon my-4"/> <span> hello@example.com</span>
+                        </div>
+
+                        <div class="info">
+                            <font-awesome-icon icon="fa-solid fa-location-dot" class="rounded_icon"/> <span> Main Avenue, 987</span>
+                        </div>
+
+                        <RoundedButton text="View Map" class="border_btn my-4 text_blue_lagoon" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
@@ -426,7 +497,7 @@ export default {
         border-radius: 0.25rem;
     }
 
-    .member_socials {
+    .rounded_icon {
         color: $surfie_green;
         background-color: #52b9bb3f;
         border-radius: 100%;
@@ -440,6 +511,10 @@ export default {
 
     .border_btn {
         border: 1px solid $blue_lagoon;
+    }
+
+    .text_blue_lagoon {
+        color: $blue_lagoon;
     }
 
     section {
@@ -520,6 +595,14 @@ export default {
             border: 1px solid $woodsmoke;
             width: 50%;
         }
+    }
+
+    .section_message {
+        
+        input, select, textarea {
+            background-color: $silver_sand;
+        }
+
     }
 
 </style>

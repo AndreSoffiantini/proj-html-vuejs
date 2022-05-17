@@ -1,6 +1,6 @@
 <template>
   
-    <button class="btn text-uppercase text-white pb-2">{{text}}</button>
+    <button class="btn text-uppercase pb-2">{{text}}</button>
 
 </template>
 
