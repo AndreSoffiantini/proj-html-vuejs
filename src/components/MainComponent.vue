@@ -6,15 +6,15 @@
 
         <section class="section_intro_video py-5 text-center">
             
-            <div class="container text-center">
+            <div class="container text-center p-5">
 
-                <span class="small_title">Introduction Video</span>
+                <strong class="small_title">Introduction Video</strong>
 
-                <h2>Advisory <span class="styled_title">Performance</span> </h2>
+                <h2 class="text-black my-3">Advisory <span class="light_bg_title">Performance</span> </h2>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum inventore labore omnis aut cumque voluptates et enim cupiditate doloribus eius.</p>
 
-                <div class="video position-relative">
+                <div class="video position-relative p-5">
                     <img class="mw-100" src="@/assets/img/images/video-1.jpg" alt="">
                     <font-awesome-icon icon="fa-solid fa-play" class="play_btn position-absolute top-50 start-50 translate-middle"/>
                 </div>
@@ -29,7 +29,7 @@
 
                 <span class="small_title">What are we doing</span>
 
-                <h2> <span class="squared_title">Results</span> in numbers </h2>
+                <h2> <span class="dark_bg_title">Results</span> in numbers </h2>
 
                 <div class="row row-cols-4 py-5">
 
@@ -65,7 +65,7 @@
 
                 <span class="small_title">Our business areas</span>
 
-                <h2 class="text-white"> Excellence in <span class="squared_title">Services</span> </h2>
+                <h2 class="text-white"> Excellence in <span class="dark_bg_title">Services</span> </h2>
 
                 <div class="row">
 
@@ -201,13 +201,74 @@
 
         </section>
 
-        <section class="py-5"></section>
+        <section class="section_team py-5">
 
-        <section class="py-5"></section>
+            <div class="container p-5">
+                <div class="row">
 
-        <section class="py-5"></section>
+                    <div class="col-9">
 
-        <section class="py-5"></section>
+                        <strong class="small_title">We like what we do</strong>
+
+                        <h2 class="text-black my-3"> <span class="light_bg_title">Team</span> of Experts </h2>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum inventore labore omnis aut cumque voluptates et enim cupiditate doloribus eius.</p>
+
+                        <div class="row row-cols-2">
+
+                            <div class="team_member_card col border-white" v-for="member in team_members" :key="'team member ' + member.id">
+
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="@/assets/img/images/team-1.jpg" class="img-fluid rounded-start" :alt="'team member ' + member.id">
+                                        </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-black">{{member.name}}</h4>
+                                            <p class="card-text text-uppercase"><small class="text-muted">{{member.role}}</small></p>
+                                            <div>
+
+                                                <font-awesome-icon icon="fa-brands fa-facebook-f" class="member_socials"/>
+                                                <font-awesome-icon icon="fa-brands fa-twitter" class="member_socials mx-4" />
+                                                <font-awesome-icon icon="fa-brands fa-linkedin-in" class="member_socials"/>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-3">
+
+                        <h4 class="text-white">President speech</h4>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, molestias!</p>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ipsum quos voluptatibus nam quis rerum laborum incidunt minus rem pariatur!</p>
+
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, labore!</p>
+
+                        <strong class="text-white">T. Johnson</strong>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section_news py-5"></section>
+
+        <section class="section_newsletter py-5"></section>
+
+        <section class="section_message py-5"></section>
 
     </main>
 
@@ -222,6 +283,32 @@ export default {
     components: {
         Jumbotron,
         BorderBtn
+    },
+    data() {
+        return {
+           team_members: [
+               {
+                   id: '1',
+                   name: 'David Cooper',
+                   role: 'Cto & Co-Founder'
+               },
+               {
+                   id: '2',
+                   name: 'Oliver Jones',
+                   role: 'Chief Procurement'
+               },
+               {
+                   id: '3',
+                   name: 'Emma Lopez',
+                   role: 'Chief Marketing'
+               },
+               {
+                   id: '4',
+                   name: 'T. Johnson',
+                   role: 'CEO & President'
+               }
+           ] 
+        }
     }
 }
 </script>
@@ -230,18 +317,29 @@ export default {
 
     .small_title {
         text-transform: uppercase;
-        color: $blue_lagoon;
-        }
-
-    .styled_title {
-        color: $surfie_green;
-        background-color: $gray_nurse;
-        padding: 0 0.5rem;
+        color: $fountain_blue;
+        font-size: 0.75rem;
     }
 
-    .squared_title {
-        background-color: $tradewind;
-        opacity: 0.6;
+    .light_bg_title {
+        color: $surfie_green;
+        background-color: #52b9bb3f;
+        padding: 0 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .dark_bg_title {
+        background-color: #60a9ad3a;
+        padding: 0 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .member_socials {
+        color: $surfie_green;
+        background-color: #52b9bb3f;
+        border-radius: 100%;
+        padding: 0.75rem;
+        aspect-ratio: 1;
     }
 
     section {
@@ -287,6 +385,17 @@ export default {
             }
 
         }
+    }
+
+    .section_team {
+
+        .col-3 {
+            background-color: $surfie_green;
+            color: $gray_nurse;
+            border-radius: 0.25rem;
+            padding: 1.3rem;
+        }
+
     }
 
 </style>
