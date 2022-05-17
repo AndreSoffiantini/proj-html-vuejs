@@ -19,7 +19,7 @@
                         <a href="">Team</a>
                         <a href="">Blog</a>
                         <a href=""> <font-awesome-icon icon="fa-regular fa-user" /> </a>
-                        <FilledBtn text='Get in touch' />
+                        <RoundedButton text='Get in touch' class="filled_btn" />
                     </nav>
 
                 </div>
@@ -33,7 +33,7 @@
 
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, temporibus.</p>
 
-                    <FilledBtn text='Get in touch' /> <BorderBtn text='Read more' />
+                    <RoundedButton text='Get in touch' class="filled_btn" /> <RoundedButton text='Read more' class="border_btn" />
 
                 </div>
 
@@ -46,19 +46,25 @@
 </template>
 
 <script>
-import FilledBtn from '@/components/FilledBtn.vue';
-import BorderBtn from '@/components/BorderBtn.vue';
+import RoundedButton from '@/components/RoundedButton.vue';
 
 export default {
     name: 'JumbotronComponent',
     components: {
-        FilledBtn,
-        BorderBtn
+        RoundedButton
     }
 }
 </script>
 
 <style lang="scss" scoped>
+
+    .filled_btn {
+        background-color: $blue_lagoon;
+    }
+
+    .border_btn {
+        border: 1px solid $blue_lagoon;
+    }
 
     .jumbotron {
         height: 900px;

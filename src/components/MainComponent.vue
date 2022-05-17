@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="col-3 d-flex justify-content-end align-items-center">
-                        <BorderBtn text='See all' />
+                        <RoundedButton text='See all' class="border_btn"/>
                     </div>
 
                 </div>
@@ -264,7 +264,65 @@
 
         </section>
 
-        <section class="section_news py-5"></section>
+        <section class="section_news py-5">
+
+            <div class="container p-5">
+
+                <strong class="small_title">Our editorial content</strong>
+                <h2 class="text-black my-3">Latest <span class="light_bg_title">News</span> </h2>
+
+                <div class="row">
+
+                    <div class="col-9 d-flex align-items-center">
+                        <p>Every week we publish content about what is best in the business world</p>
+                    </div>
+
+                    <div class="col-3 d-flex justify-content-end align-items-center">
+                        <RoundedButton text='See all' class="filled_btn"/>
+                    </div>
+
+                </div>
+
+                <div class="row row-cols-3 my-4">
+
+                    <div class="col">
+
+                        <div class="news_card card text-white p-0">
+                            <img src="@/assets/img/images/news-1.jpg" class="card-img">
+                            <div class="card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title text-center">Increasing creativity is possible for everyone</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="news_card card text-white p-0">
+                            <img src="@/assets/img/images/news-2.jpg" class="card-img">
+                            <div class="card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title text-center">Because market research is part of the business plan</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="news_card card text-white p-0">
+                            <img src="@/assets/img/images/news-3.jpg" class="card-img">
+                            <div class="card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title text-center">Working from home is now a trend</h5>
+                            </div>
+                        </div>
+
+                    </div>               
+                    
+                </div>
+
+            </div>
+
+        </section>
 
         <section class="section_newsletter py-5"></section>
 
@@ -276,13 +334,13 @@
 
 <script>
 import Jumbotron from '@/components/JumbotronComponent.vue'
-import BorderBtn from '@/components/BorderBtn.vue'
+import RoundedButton from '@/components/RoundedButton.vue'
 
 export default {
     name: 'MainComponent',
     components: {
         Jumbotron,
-        BorderBtn
+        RoundedButton
     },
     data() {
         return {
@@ -342,6 +400,14 @@ export default {
         aspect-ratio: 1;
     }
 
+    .filled_btn {
+        background-color: $blue_lagoon;
+    }
+
+    .border_btn {
+        border: 1px solid $blue_lagoon;
+    }
+
     section {
         color: $mid_gray;
     }
@@ -396,6 +462,20 @@ export default {
             padding: 1.3rem;
         }
 
+    }
+
+    .section_news {
+        background-color: $gray_nurse;
+
+        .news_card {
+
+            border-radius: 0.75rem;
+
+            img {
+                filter: brightness(0.4);
+                border-radius: 0.75rem;
+            }
+        }
     }
 
 </style>

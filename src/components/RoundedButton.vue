@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'BorderBtn',
+    name: 'RoundedButton',
     props: {
         text: String
     }
