@@ -12,13 +12,13 @@
 
                 <div class="col">
 
-                    <nav class="text-uppercase">
-                        <a class="mx-3" href="">Home</a>
-                        <a class="mx-3" href="">About</a>
-                        <a class="mx-3" href="">Services</a>
-                        <a class="mx-3" href="">Team</a>
-                        <a class="mx-3" href="">Blog</a>
-                        <a class="mx-3" href=""> <font-awesome-icon icon="fa-regular fa-user" /> </a>
+                    <nav class="text-uppercase d-flex justify-content-between align-items-center">
+                        <a href="">Home</a>
+                        <a href="">About</a>
+                        <a href="">Services</a>
+                        <a href="">Team</a>
+                        <a href="">Blog</a>
+                        <a href=""> <font-awesome-icon icon="fa-regular fa-user" /> </a>
                         <RoundedButton text='Get in touch' class="filled_btn text-white" />
                     </nav>
 
@@ -73,7 +73,7 @@ export default {
 
     .jumbotron {
         height: 900px;
-        background-image: url(@/assets/img/images/bg-2.jpg);
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(@/assets/img/images/bg-2.jpg);
 
         h1 {
             font-weight: 900;

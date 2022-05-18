@@ -1,6 +1,6 @@
 <template>
   
-    <button class="btn text-uppercase pb-2">{{text}}</button>
+    <button class="btn text-uppercase pb-2 px-4">{{text}}</button>
 
 </template>
 
@@ -17,6 +17,11 @@ export default {
 
     button {
         border: 1px solid $blue_lagoon;
+    }
+
+    button:hover {
+        background-color: $blue_lagoon;
+        color: white;
     }
 
 </style>

@@ -1,10 +1,10 @@
 <template>
   
-    <h3 class="text-white mb-3 text-uppercase">
+    <span class="text-white mb-3 text-uppercase fs-3">
         
         <div class="colored_slogan">Nex </div> Gen   
     
-    </h3>
+    </span>
 
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   
-    <footer>
+    <footer class="text-secondary">
 
         <div class="footer_main py-5">
 
@@ -38,7 +38,7 @@
                             <div class="section_element my-2" v-for="element in section.elements" :key="element">
 
                                 <font-awesome-icon icon="fa-solid fa-arrow-right"/> 
-                                <a class="mx-2 text-decoration-none text-light"> {{element}}</a>
+                                <a class="mx-2 text-decoration-none text-secondary"> {{element}}</a>
 
                             </div>
 
